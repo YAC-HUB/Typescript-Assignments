@@ -1,0 +1,31 @@
+//Simple calculator in typescript using enum Operators.
+
+enum Operators {
+Addition = '+',
+Subtract = '-',
+Multiply = '*',
+Divide = '/',
+Modulus = '%'
+}
+function calc (num1: number, operator: Operators, num2: number): number {
+    let result: number;
+    if (operator === Operators.Addition) {
+        result = num1 + num2;
+    } else if (operator === Operators.Subtract) {
+        result = num1 - num2;
+    } else if (operator === Operators.Multiply) {
+        result = num1 * num2;
+    } else if (operator === Operators.Divide) {
+        result = num1 / num2;
+    } else if (operator === Operators.Modulus) {
+        result = num2 & num1;
+    } else {
+        throw new Error('Wrong operator / sign!');
+    }
+    return result;
+}
+let num1 = 20;
+let operator = Operators.Modulus;
+let num2 = 50;
+const result = calc (num1, operator, num2);
+console.log (`${num1} ${operator} ${num2} = ${result}`);
