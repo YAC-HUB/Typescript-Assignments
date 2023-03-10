@@ -1,0 +1,15 @@
+// Task-3: Create a function that takes a product price and discount rate as input and calculate discount amount of the product 
+// Prompt-sync package installation for terminal input
+import promptSync from 'prompt-sync';
+const prompt = promptSync(); 
+// Terminal prompt for two variables input
+let pPrice: number = parseFloat(prompt ("Original price: ", ""));
+let dRate: number = parseFloat(prompt ("Discount rate: ", ""));
+// Formula to calculate discount price of the product
+let dPrice: number = pPrice * (dRate/100);
+// Use if-else function to determine the discount on product is valid / invalid
+if (dRate >= 50) {
+    console.log ("Alert: Discount percentage / rate is invalid!");
+} else {
+    console.log (`Discount amount: ${dPrice}\nFinal price: ${(pPrice - dPrice)}`);
+}
