@@ -1,0 +1,13 @@
+// Task-4: Create a function that calculate the factorial of a number
+// Prompt-sync package installation for terminal input
+import promptSync from 'prompt-sync';
+const prompt = promptSync(); 
+// Terminal prompt for variable input
+let nValue: number = parseFloat(prompt ("Number value: ", ""));
+let fValue: number = 1;
+// Formula to calculate factorial value of the number
+while (nValue >=1) {
+    fValue = fValue * nValue;
+    nValue--;
+}
+console.log (`The factorial is: ${fValue}`);
