@@ -1,0 +1,32 @@
+import promptSync from 'prompt-sync';
+const prompt = promptSync();
+    
+    enum Operators {
+        Add = '+',
+        Less = '-',
+        Multiply = '*',
+        Divide = '/'
+        };
+    
+    function calc (num1: number, operator: string, num2: number): number {
+        let result: number;
+        if (operator === Operators.Add) {
+            result = num1 + num2;
+        } else if (operator === Operators.Less) {
+            result = num1 - num2;
+        } else if (operator === Operators.Multiply) {
+            result = num1 * num2;
+        } else if (operator === Operators.Divide) {
+            result = num1 / num2;
+        } else {
+            throw new Error('Zero value / No sign!');
+        }
+        return result;
+    }
+    
+    const num1: number = parseFloat(prompt ('Enter 1st number:', '0'));
+    const operator = prompt ('Enter an operator:');
+    const num2: number = parseFloat(prompt ('Enter 2nd number:', '0'));
+    
+    const result = calc (num1, operator, num2);
+    console.log (`${num1} ${operator} ${num2} = ${result}`);
