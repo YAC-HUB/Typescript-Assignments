@@ -1,0 +1,14 @@
+// Task-2: Create an array manipulation program
+//Declare an array
+const fList0: string [] = ["apple", "banana", "cherry", "orange"];
+// Print array values before manipulation program
+console.log (fList0.toString());
+// Append a string to the end of the array and print
+fList0.push("melon");
+console.log (fList0.toString());
+// Prepend a string at the start of the array and print
+fList0.unshift("mango");
+console.log (fList0.toString());
+// Remove a string of a specific index, replace it with another string and print
+fList0.splice(2,1,"fig");
+console.log (fList0.toString());
