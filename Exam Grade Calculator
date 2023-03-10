@@ -1,0 +1,24 @@
+// Task-1: Create a program to calculate student grades 
+// Prompt-sync package installation for terminal input
+import promptSync from 'prompt-sync';
+const prompt = promptSync(); 
+// Terminal prompt for two variables input
+let engScore: number = parseFloat(prompt ("Enter English exam percentage: ", ""));
+let urdScore: number = parseFloat(prompt ("Enter Urdu exam percentage: ", ""));
+// Formula to calculate average score of the two variables
+let avgScore: number = (engScore + urdScore) / 2;
+let grade: string;
+// Use if-else function to determine the student's grade based on average score
+if (avgScore > 90) {
+    grade = "Grade A";
+} else if (avgScore > 80 && avgScore <= 90) {
+    grade = "Grade B";
+} else if (avgScore > 70 && avgScore <= 80) {
+    grade = "Grade C";
+} else if (avgScore > 60 && avgScore <= 70) {
+    grade = "Grade D";
+} else {
+    grade = "Grade F";
+}
+//Display the grade to the user as output
+console.log (`Average score is ${avgScore} \n${grade}`);
